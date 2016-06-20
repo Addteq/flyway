@@ -1,7 +1,7 @@
-Inside the directory run:
+Build the docker image by running the following command within the directory:
 
-docker-compose up -d
+docker build -t flyway .
 
-Run the following to perform migrations:
+Run the following to invoke the flyway command within the docker container:
 
-docker run -it --rm --link flyway_postgres_1 -v `pwd`:/flyway/sql flyway_flyway migrate
+docker run -it --rm -v `pwd`:/flyway/sql flyway
