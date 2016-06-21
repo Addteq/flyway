@@ -1,0 +1,7 @@
+Build the docker image by running the following command within the directory:
+
+docker build -t flyway .
+
+Run the following to invoke the flyway command within the docker container:
+
+docker run -it --rm flyway
